@@ -5,14 +5,18 @@
 <head>
     <meta charset="utf-8" />
     <title>Web lab1</title>
-    <style>
+    <style type="text/css">
+        @font-face {
+            font-family: 'Roboto';
+            src: url(http://fonts.gstatic.com/s/roboto/v15/mErvLBYg_cXG3rLvUsKT_fesZW2xOQ-xsNqO47m55DA.woff2);
+        }
 
         * {
             color: white;
         }
 
         header {
-            height: 20px;
+            height: 18px;
             font-family: 'Courier New';
             background-color: green;
             font-size: large;
@@ -21,10 +25,16 @@
         }
 
         .content {
-            padding: 25px;
+            font-family: Roboto;
+            font-size: 18px;
+            padding-left: 25px;
+            padding-right: 25px;
+            padding-top: 1px;
+            padding-bottom: 0.5px;
             background-color: blue;
-            margin-left: 710px;
-            margin-right: 710px;
+            margin-left: 685px;
+            margin-right: 685px;
+            line-height: 1.2;
         }
 
         body {
@@ -42,9 +52,14 @@
             padding: 10px;
         }
 
+        table {
+            border: solid 1px silver;
+            border-spacing: 3px;
+        }
+
         td {
-            width: 45px;
-            height: 40px;
+            width: 40px;
+            height: 30px;
             border: solid 1px silver;
             text-align: center;
             vertical-align: bottom;
@@ -72,27 +87,42 @@
 
         ul {
             list-style-type: disc;
-            line-height: 180%;
+            line-height: 1.5;
+        }
+
+        h1 {
+            margin-top: 16px;
         }
 
         h2 {
             word-spacing: 7px;
             margin-bottom: -15px;
+            margin-top: -15px;
         }
 
+        h3 {
+            margin-top: -5px;
+            margin-bottom: -5px;
+        }
+
+            h3 ~ p {
+                line-height: 0.7;
+            }
+
         .figure {
-            width: 90px;
-            height: 90px;
+            width: 100px;
+            height: 100px;
             background: blue;
             border: solid 5px white;
             border-top-left-radius: 15%;
             border-bottom-right-radius: 25%;
             float: left;
             margin-right: 20px;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
         }
 
-        taim {
+        aside {
+            margin-top: -5px;
             float: right;
             text-align: right;
         }
@@ -101,48 +131,48 @@
 <body>
     <header>Hello, Header!</header>
     <div class="content">
-        <h1 style="margin-top: 0px">Hello, content!</h1>
-            <div class="figure"> </div>
-            <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-            </p>
-            <p style=" text-align: center;"><a href="http://www.csd.tsu.ru">www.csd.tsu.ru</a></p>
-            <section id="part1">
-                <nav>
-                    <h2><span style="color:red;">Here</span> is the list:</h2>
-                    <ul>
-                        <li>Value 1</li>
-                        <li style="color: aqua; letter-spacing: 0.3em;">Value 2 </li>
-                        <li>Value 3</li>
-                    </ul>
-                </nav>
-            </section>
-            <taim>
-                <table style=" border: solid 1px silver;">
-                    <tr>
-                        <td rowspan="2" style="background-color:green;">1</td>
-                        <td>2</td>
-                        <td>3</td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>5</td>
-                    </tr>
-                    <tr>
-                        <td>6</td>
-                        <td colspan="2" style="background-color:red;">7</td>
-                    </tr>
-                </table>
-                <img style=" margin-top: 20px;" src="images.png" />
-            </taim>
-            <h3>Here are some visual styles:</h3>
-            <p><i>Italic</i> </p>
-            <p><b>Bold</b> </p>
-            <p><u>UnderLined</u> </p>
-            <p style="margin-bottom: 0px">
-                <del>Line through</del>
-            </p>
-     </div>
-     <footer>Hello, Footer!</footer>
+        <h1>Hello, content!</h1>
+        <div class="figure"> </div>
+        <p style="margin-bottom: -10px;">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        </p>
+        <p style=" text-align: center;"><a href="http://www.csd.tsu.ru">www.csd.tsu.ru</a></p>
+        <section id="part1">
+            <nav>
+                <h2><span style="color:red;">Here</span> is the list:</h2>
+                <ul>
+                    <li>Value 1</li>
+                    <li style="color: aqua; letter-spacing: 0.3em;">Value 2 </li>
+                    <li>Value 3</li>
+                </ul>
+            </nav>
+        </section>
+        <aside>
+            <table>
+                <tr>
+                    <td rowspan="2" style="background-color:green;">1</td>
+                    <td>2</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td colspan="2" style="background-color:red;">7</td>
+                </tr>
+            </table>
+            <img style=" margin-top: 12px;" src="images.png" alt="" />
+        </aside>
+        <h3>Here are some visual styles:</h3>
+        <p><i>Italic</i> </p>
+        <p><b>Bold</b> </p>
+        <p style="margin-bottom: 30px;"><u>UnderLined</u> </p>
+        <p style="margin-bottom: 15px;">
+            <del>Line through</del>
+        </p>
+    </div>
+    <footer>Hello, Footer!</footer>
 </body>
 </html>
